@@ -1,0 +1,26 @@
+//22 periyotluk hareketli ortalamayı kapanış fiyatına göre ters çevirir.
+var V = Sistem.GrafikVerileri ; 
+var C = Sistem.GrafikFiyatOku(V, "Kapanis" ) ;
+ 
+
+ 
+int barSayisi= V.Count;
+int movPeriyot  = 22;
+  
+  
+var reverseMov1 = Sistem.Liste(barSayisi,0.0f);
+ 
+
+var ma1 = Sistem.MA(movPeriyot  , "Simple", "Kapanis");
+
+float cls = C[V.Count-1];
+
+for (int i = 0 ; i < V.Count -1; i++){
+
+ 
+  reverseMov1[barSayisi-1-i] =  cls +cls - ma1[barSayisi-1-i];
+
+}
+
+Sistem.Cizgiler[0].Deger =ma1;
+Sistem.Cizgiler[1].Deger =reverseMov1;
