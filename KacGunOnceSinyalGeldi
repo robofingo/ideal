@@ -1,0 +1,15 @@
+int parametreKacGun   = 10 ;
+int i = 1;
+int kacGunOnceBulundu=0;
+bool b = true;
+Sistem.SorguBaslik[0] = "Kaç Bar Once";
+Sistem.SorguBaslik[1] = "CCI"; 
+while (b && i<parametreKacGun ) {
+if(cci7[Sistem.BarSayisi-i]  ==cci7[Sistem.BarSayisi-i-1]){
+kacGunOnceBulundu = i-1;
+  Sistem.SorguDeger[0] = kacGunOnceBulundu ;
+Sistem.SorguDeger[1] =cci7[Sistem.BarSayisi-i]  ;
+ 
+Sistem.SorguEkle();
+b=false;
+}
