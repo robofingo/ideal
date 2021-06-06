@@ -13,3 +13,5 @@ Sistem.SorguDeger[1] =cci7[Sistem.BarSayisi-i]  ;
 Sistem.SorguEkle();
 b=false;
 }
+i++;
+}
